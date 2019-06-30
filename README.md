@@ -1,5 +1,5 @@
 <h1>Dynamic Programming</h1>
-Repository with differents GeeksforGeeks's exercises resolved by dynamic programming.
+Repository with differents GeeksforGeeks's exercises resolved by dynamic programming.<br>
 <br>
 - Golomb sequence: https://www.geeksforgeeks.org/golomb-sequence/ <br>
 - Maximum Product Cutting: https://www.geeksforgeeks.org/maximum-product-cutting-dp-36/ <br>
