@@ -1,14 +1,17 @@
 cache={}
 def mem(n): # memoization
-	if n == 1 or n==2:
+	if n==0:
+		return 0
+	elif n == 1 or n==2:
 		return 1
 	elif n in cache:
 		return cache[n]
 	else:
-		cache[n] = (mem(mem(n-1)) + mem(n-mem(n-1)))
+		cache[n] = mem(mem(n-1)) + mem(n-mem(n-1))
 	return cache.values()[-1]
 
 def mem_init():
+	mem(0)
 	mem(1)
 	mem(2)
 	mem(3)
