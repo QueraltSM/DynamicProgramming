@@ -1,54 +1,42 @@
-array=[]
-result = 0
-recursive=0
-array.append(0)
-array.append(0)
-
-def auxiliar_tab(i,n):
-	global recursive
-	global result
-
-	recursive=1
-
+def auxiliar_tab(i,n,array,recursive,result):
 	if i==n:
 		return result
 	else:
-		result = max(result,max(i*(n-i),tab(n-i)*i))
-		auxiliar_tab(i+1,n)
+		result = max(result,max(i*(n-i),tab(n-i,array,recursive,result)*i))
+		auxiliar_tab(i+1,n,array,recursive,result)
 	return result
 
-def tab(n): # tabulation
-	global recursive
-	global result
-
+def tab(n,array,recursive,result): # tabulation
 	if n==0 or n==1:
 		return 0
 	elif recursive==0:
-		array.append(auxiliar_tab(1,n))
+		array.append(auxiliar_tab(1,n,array,1,0))
 		recursive=0
-		result=0
 	elif recursive==1:
 		return array[n]
 	return array[-1]
 
 def tab_init():
-	tab(1)
-	tab(2)
-	tab(3)
-	tab(4)
-	tab(5)
-	tab(6)
-	tab(7)
-	tab(8)
-	tab(9)
-	tab(10)
-	tab(11)
-	tab(12)
-	tab(13)
-	tab(14)
-	tab(15)
-	tab(16)
-	tab(17)
-	tab(18)
-	tab(19)
-	tab(20)
+	array=[]
+	array.append(0)
+	array.append(0)
+	tab(1,array,0,0)
+	tab(2,array,0,0)
+	tab(3,array,0,0)
+	tab(4,array,0,0)
+	tab(5,array,0,0)
+	tab(6,array,0,0)
+	tab(7,array,0,0)
+	tab(8,array,0,0)
+	tab(9,array,0,0)
+	tab(10,array,0,0)
+	tab(11,array,0,0)
+	tab(12,array,0,0)
+	tab(13,array,0,0)
+	tab(14,array,0,0)
+	tab(15,array,0,0)
+	tab(16,array,0,0)
+	tab(17,array,0,0)
+	tab(18,array,0,0)
+	tab(19,array,0,0)
+	tab(20,array,0,0)
